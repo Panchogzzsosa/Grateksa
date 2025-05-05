@@ -21,6 +21,10 @@ app.get('/brigadas', (req, res) => {
   res.render('brigadas');
 });
 
+app.get('/proteccion-civil', (req, res) => {
+  res.render('proteccion-civil');
+});
+
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 }); 
