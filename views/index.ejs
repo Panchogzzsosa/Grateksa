@@ -30,42 +30,57 @@
 </head>
 <body class="bg-[#F9FAFB] text-[#22223B] font-[Inter,sans-serif]">
   <!-- NAVBAR -->
-  <nav class="w-full fixed top-0 left-0 bg-white shadow-sm z-50 flex items-center justify-between px-8 py-4 animate-fadeIn">
+  <nav class="w-full fixed top-0 left-0 bg-white shadow-sm z-50 flex items-center justify-between px-4 md:px-8 py-4 animate-fadeIn">
     <div class="flex items-center gap-3">
       <img src="/images/favicon.png" alt="Logo Grateksa" class="h-[60px] w-[90px] object-contain mr-4">
       <span class="text-xl font-extrabold tracking-wide">GRATEKSA</span>
     </div>
-    <div class="flex gap-8 text-base font-semibold">
-      <a href="#servicios" class="hover:text-red-600 transition">Servicios</a>
-      <a href="#quienes-somos" class="hover:text-red-600 transition">Quiénes Somos</a>
+    <!-- Botón hamburguesa móvil -->
+    <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50" aria-label="Abrir menú">
+      <span class="block w-7 h-1 bg-[#22223B] mb-1 rounded transition-all"></span>
+      <span class="block w-7 h-1 bg-[#22223B] mb-1 rounded transition-all"></span>
+      <span class="block w-7 h-1 bg-[#22223B] rounded transition-all"></span>
+    </button>
+    <!-- Menú -->
+    <div id="nav-menu" class="fixed md:static top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg md:shadow-none flex flex-col md:flex-row gap-8 text-base font-semibold items-start md:items-center justify-start md:justify-end px-8 py-20 md:py-0 md:px-0 transition-transform duration-300 transform translate-x-full md:translate-x-0 z-40">
+      <a href="#servicios" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Servicios</a>
+      <a href="#quienes-somos" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Quiénes Somos</a>
     </div>
+    <!-- Fondo oscuro al abrir menú -->
+    <div id="nav-backdrop" class="fixed inset-0 bg-black bg-opacity-40 z-30 hidden md:hidden"></div>
   </nav>
 
   <!-- HERO -->
-  <section class="w-full min-h-[80vh] flex items-center justify-center pt-28 pb-12 px-6 animate-fadeInUp relative" style="background-image: url('/images/hero-bg.jpg'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 bg-white opacity-50 pointer-events-none z-0"></div>
-    <div class="w-full max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 z-10">
-      <div class="flex-1 flex flex-col items-start gap-6" data-aos="fade-right">
-        <span class="text-4xl md:text-6xl font-black tracking-[.35em] uppercase text-[#d90429] drop-shadow-[0_2px_8px_white] mb-2 relative" style="letter-spacing: .25em; font-family: 'Bebas Neue', Arial, sans-serif;">
+  <section class="w-full min-h-[80vh] flex items-center justify-center pt-28 pb-12 px-4 md:px-6 animate-fadeInUp relative" style="background-image: url('/images/hero-bg.jpg'); background-size: cover; background-position: center;">
+    <!-- Overlay oscuro para mejor contraste -->
+    <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+    <div class="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
+      <!-- Hero contenido -->
+      <div class="flex-1 flex flex-col items-center md:items-start gap-4 md:gap-6 text-center md:text-left" data-aos="fade-right">
+        <!-- Logo circular y pequeño solo en móvil -->
+        <div class="block md:hidden mx-auto mb-2 rounded-full bg-white bg-opacity-80 p-2 shadow-md w-20 h-20 flex items-center justify-center">
+          <img src="/images/favicon.png" alt="Logo Grateksa" class="h-16 w-16 object-contain">
+        </div>
+        <span class="text-4xl md:text-6xl font-black tracking-[.35em] uppercase text-white drop-shadow-lg mb-2 relative" style="letter-spacing: .25em; font-family: 'Stardos Stencil', Arial, sans-serif;">
           GRATEKSA
-          <span class="block w-2/3 h-1 bg-[#d90429] mt-2 rounded-full"></span>
+          <span class="block w-2/3 h-1 bg-[#d90429] mt-2 rounded-full mx-auto md:mx-0"></span>
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-black">Planes de contingencia y capacitación <span class="text-[#d90429]">profesional</span> para tu empresa</h1>
-        <p class="text-lg text-black">Protege a tu equipo y tu negocio con expertos en seguridad, brigadas y atención de emergencias.</p>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-white">Planes de contingencia y capacitación <span class="text-[#d90429]">profesional</span> para tu empresa</h1>
+        <p class="text-lg text-white opacity-90">Protege a tu equipo y tu negocio con expertos en seguridad, brigadas y atención de emergencias.</p>
       </div>
       <div class="flex-1 flex justify-center z-10" data-aos="fade-left">
-        <img src="/images/slider/Foto1.jpg" alt="Hero Grateksa" class="w-full max-w-xs rounded-2xl object-cover">
+        <img src="/images/slider/Foto1.jpg" alt="Hero Grateksa" class="w-full max-w-xs rounded-2xl object-cover shadow-lg hidden md:block">
       </div>
     </div>
-    <!-- Redes sociales hero -->
+    <!-- Redes sociales hero (solo desktop) -->
     <div class="hidden md:flex flex-col gap-4 items-center absolute bottom-8 right-8 z-20 opacity-60 hover:opacity-100 transition-opacity">
-      <a href="https://www.facebook.com/p/Grateksa-100093127039192/" target="_blank" class="hover:text-[#1877f3] text-[#22223B]" aria-label="Facebook">
+      <a href="https://www.facebook.com/p/Grateksa-100093127039192/" target="_blank" class="hover:text-[#1877f3] text-white" aria-label="Facebook">
         <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H6v4h4v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <a href="https://www.instagram.com/grateksa/" target="_blank" class="hover:text-[#e1306c] text-[#22223B]" aria-label="Instagram">
+      <a href="https://www.instagram.com/grateksa/" target="_blank" class="hover:text-[#e1306c] text-white" aria-label="Instagram">
         <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
       </a>
-      <a href="https://www.tiktok.com/@grateksaa" target="_blank" class="hover:text-[#25F4EE] text-[#22223B]" aria-label="TikTok">
+      <a href="https://www.tiktok.com/@grateksaa" target="_blank" class="hover:text-[#25F4EE] text-white" aria-label="TikTok">
         <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17a4 4 0 1 1 4-4V3h3a5 5 0 0 0 5 5"/></svg>
       </a>
     </div>
@@ -178,6 +193,26 @@
       showImg(idx);
       startInterval();
     })();
+
+    // Menú móvil hamburguesa
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('translate-x-full');
+      navBackdrop.classList.toggle('hidden');
+    });
+    navBackdrop.addEventListener('click', () => {
+      navMenu.classList.add('translate-x-full');
+      navBackdrop.classList.add('hidden');
+    });
+    // Cierra el menú al hacer clic en un enlace
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.add('translate-x-full');
+        navBackdrop.classList.add('hidden');
+      });
+    });
   </script>
 </body>
 </html> 
