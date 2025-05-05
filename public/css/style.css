@@ -954,6 +954,10 @@ video {
   animation: bounce 1s infinite;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
