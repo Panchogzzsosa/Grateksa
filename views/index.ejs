@@ -94,7 +94,13 @@
     <h2 class="text-3xl font-bold text-center mb-12 animate-fadeIn">Nuestros Servicios</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <% services.forEach((service, i) => { %>
-        <a href="<%= service.title === 'Capacitación de Brigadas' ? '/brigadas' : service.title === 'Protección civil en tu escuela' ? '/proteccion-civil' : '#' %>" class="group block">
+        <a href="<%= service.title === 'Capacitación de Brigadas' ? '/brigadas' : 
+                   service.title === 'Protección civil en tu escuela' ? '/proteccion-civil' : 
+                   service.title === 'Seguridad en eventos' ? '/seguridad-eventos' : 
+                   service.title === 'Programas Internos' ? '/programas-internos' : 
+                   service.title === 'Bomberos y Fuerza Civil' ? '/bomberos-fuerza-civil' : 
+                   service.title === 'Ambulancias para Eventos' ? '/ambulancias-eventos' : '#' %>" 
+           class="group block">
           <div class="bg-white rounded-2xl p-0 flex flex-col border border-[#ececec] hover:shadow-lg transition animate-scaleIn h-full group-hover:shadow-xl" data-aos="fade-up">
             <img src="<%= service.img %>" alt="<%= service.title %>" class="w-full h-48 md:h-64 object-cover rounded-2xl rounded-b-none">
             <div class="flex flex-col flex-1 justify-between p-8 gap-2 w-full h-full">
@@ -107,19 +113,8 @@
           </div>
         </a>
       <% }); %>
-      <!-- Servicio de Ambulancias para eventos -->
-      <a href="#" class="group block">
-        <div class="bg-white rounded-2xl p-0 flex flex-col border border-[#ececec] hover:shadow-lg transition animate-scaleIn h-full group-hover:shadow-xl" data-aos="fade-up">
-          <img src="/images/servicios/servicio6.jpg" alt="Ambulancias para eventos" class="w-full h-48 md:h-64 object-cover rounded-2xl rounded-b-none">
-          <div class="flex flex-col flex-1 justify-between p-8 gap-2 w-full h-full">
-            <div>
-              <h3 class="text-2xl font-bold mb-2">Ambulancias para eventos</h3>
-              <p class="text-[#555] mb-6">Cobertura médica profesional y ambulancias equipadas para la atención de emergencias en eventos masivos, deportivos y empresariales.</p>
-            </div>
-            <span class="text-base font-semibold text-[#22223B] flex items-center gap-2 group-hover:text-red-600 transition mt-auto">VER MÁS <span>&#8594;</span></span>
-          </div>
-        </div>
-      </a>
+      
+  
     </div>
   </section>
 

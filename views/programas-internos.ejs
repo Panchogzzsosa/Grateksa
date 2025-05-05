@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programas Internos | Grateksa</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body class="bg-[#F9FAFB] text-[#22223B] font-[Inter,sans-serif]">
+  <!-- NAVBAR -->
+  <nav class="w-full fixed top-0 left-0 bg-white shadow-sm z-50 flex items-center justify-between px-4 md:px-8 py-4 animate-fadeIn">
+    <div class="flex items-center gap-3">
+      <img src="/images/favicon.png" alt="Logo Grateksa" class="h-[60px] w-[90px] object-contain mr-4">
+      <span class="text-xl font-extrabold tracking-wide">GRATEKSA</span>
+    </div>
+    <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50" aria-label="Abrir menú">
+      <span class="block w-7 h-1 bg-[#22223B] mb-1 rounded transition-all"></span>
+      <span class="block w-7 h-1 bg-[#22223B] mb-1 rounded transition-all"></span>
+      <span class="block w-7 h-1 bg-[#22223B] rounded transition-all"></span>
+    </button>
+    <div id="nav-menu" class="fixed md:static top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg md:shadow-none flex flex-col md:flex-row gap-8 text-base font-semibold items-start md:items-center justify-start md:justify-end px-8 py-20 md:py-0 md:px-0 transition-transform duration-300 transform translate-x-full md:translate-x-0 z-40">
+      <a href="/" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Inicio</a>
+      <a href="/#servicios" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Servicios</a>
+      <a href="/#quienes-somos" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Quiénes Somos</a>
+    </div>
+    <div id="nav-backdrop" class="fixed inset-0 bg-black bg-opacity-40 z-30 hidden md:hidden"></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="w-full min-h-[50vh] flex items-center justify-center pt-28 pb-12 px-4 md:px-6 relative" style="background-image: url('/images/servicios/servicio4.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+    <div class="relative z-10 text-center w-full max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Programas Internos</h1>
+      <p class="text-lg text-white opacity-90">Implementacion de protocolos y simulacros.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN INFORMATIVA ASIMÉTRICA -->
+  <section class="w-full flex flex-col md:flex-row items-stretch justify-center py-16 px-4 gap-8 max-w-6xl mx-auto aos-animate">
+    <!-- Bloque izquierdo: título y descripción -->
+    <div class="bg-[#ffe5e9] md:rounded-l-2xl rounded-2xl md:rounded-r-none flex-1 flex flex-col justify-center p-8 md:p-12 transition-all duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-right" data-aos-delay="100">
+      <h2 class="text-3xl font-extrabold text-[#d90429] mb-4" data-aos="fade-up" data-aos-delay="200">¿En qué consiste?</h2>
+      <p class="text-lg text-[#22223B] mb-2 font-semibold" data-aos="fade-up" data-aos-delay="300">Nuestros <span class="text-[#d90429] font-bold">Programas Internos</span> están diseñados para capacitar a las escuelas en la realización de simulacros efectivos y protocolos de emergencia.</p>
+      <p class="text-base text-[#22223B]" data-aos="fade-up" data-aos-delay="400">Trabajamos en conjunto con Protección Civil para garantizar que toda la comunidad escolar esté preparada para actuar de manera segura y eficiente ante cualquier emergencia.</p>
+    </div>
+    <!-- Bloque derecho: beneficios -->
+    <div class="bg-white md:rounded-r-2xl rounded-2xl md:rounded-l-none flex-1 flex flex-col justify-center p-8 md:p-12 shadow-lg border border-[#f3f3f3] transition-all duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-left" data-aos-delay="100">
+      <h2 class="text-3xl font-extrabold text-[#d90429] mb-4" data-aos="fade-up" data-aos-delay="200">Beneficios</h2>
+      <ul class="space-y-5">
+        <li class="flex items-center gap-3 text-[#22223B] text-base font-semibold transition-transform duration-300 hover:translate-x-2" data-aos="fade-up" data-aos-delay="300"><span class="text-2xl">🏫</span>Simulacros Escolares</li>
+        <li class="flex items-center gap-3 text-[#22223B] text-base font-semibold transition-transform duration-300 hover:translate-x-2" data-aos="fade-up" data-aos-delay="400"><span class="text-2xl">🚨</span>Protocolos de Emergencia</li>
+        <li class="flex items-center gap-3 text-[#22223B] text-base font-semibold transition-transform duration-300 hover:translate-x-2" data-aos="fade-up" data-aos-delay="500"><span class="text-2xl">👥</span>Capacitación de Personal</li>
+        <li class="flex items-center gap-3 text-[#22223B] text-base font-semibold transition-transform duration-300 hover:translate-x-2" data-aos="fade-up" data-aos-delay="600"><span class="text-2xl">🛡️</span>Coordinación con Protección Civil</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE FOTOS LLAMATIVA -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-10 text-[#d90429] tracking-tight">Galería de Fotos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" id="galeria-programas">
+      <a href="/images/PI/PI1.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="100">
+        <img src="/images/PI/PI1.png" alt="Programas Internos 1" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <a href="/images/PI/PI2.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="200">
+        <img src="/images/PI/PI2.png" alt="Programas Internos 2" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <a href="/images/PI/PI3.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="300">
+        <img src="/images/PI/PI3.png" alt="Programas Internos 3" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <a href="/images/PI/PI4.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="400">
+        <img src="/images/PI/PI4.png" alt="Programas Internos 4" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <div data-aos="zoom-in" data-aos-delay="500">
+        <video src="/images/PI/PI5.mp4" controls autoplay muted playsinline class="rounded-2xl shadow-xl object-cover w-full h-64 border-4 border-white cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl" style="object-fit:cover;" preload="metadata"></video>
+      </div>
+      <a href="/images/PI/PI6.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="600">
+        <img src="/images/PI/PI6.png" alt="Programas Internos 6" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <div data-aos="zoom-in" data-aos-delay="700">
+        <video src="/images/PI/PI7.mp4" controls autoplay muted playsinline class="rounded-2xl shadow-xl object-cover w-full h-64 border-4 border-white cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl" style="object-fit:cover;" preload="metadata"></video>
+      </div>
+      <a href="/images/PI/PI8.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="800">
+        <img src="/images/PI/PI8.png" alt="Programas Internos 8" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <a href="/images/PI/PI9.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="900">
+        <img src="/images/PI/PI9.png" alt="Programas Internos 9" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <div data-aos="zoom-in" data-aos-delay="1000">
+        <video src="/images/PI/PI10.mp4" controls autoplay muted playsinline class="rounded-2xl shadow-xl object-cover w-full h-64 border-4 border-white cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl" style="object-fit:cover;" preload="metadata"></video>
+      </div>
+      <a href="/images/PI/PI11.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="1100">
+        <img src="/images/PI/PI11.png" alt="Programas Internos 11" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+      <a href="/images/PI/PI12.png" class="glightbox" data-gallery="pi-gallery" data-aos="zoom-in" data-aos-delay="1200">
+        <img src="/images/PI/PI12.png" alt="Programas Internos 12" class="rounded-2xl shadow-xl object-cover w-full h-64 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-4 border-white cursor-pointer">
+      </a>
+    </div>
+  </section>
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-[#1a1a1a] text-white mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+      <!-- Correo de contacto -->
+      <div class="w-full md:w-1/2 flex flex-col items-start mb-8 md:mb-0">
+        <h3 class="text-xl font-bold mb-4">Contacto</h3>
+        <div class="flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#d90429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          <a href="mailto:grateksa@hotmail.com" class="text-lg text-[#d90429] font-semibold hover:underline">grateksa@hotmail.com</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#d90429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.08 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.92-1.92a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="https://wa.me/528180647864" class="text-lg text-[#d90429] font-semibold hover:underline" target="_blank">+52 81 8064 7864</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#d90429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 0 1-1.9 5.4c-1.5 1.9-4.6 5.1-6.1 6.6a2.1 2.1 0 0 1-2.8 0c-1.5-1.5-4.6-4.7-6.1-6.6A8.38 8.38 0 0 1 3 10.5C3 6.36 6.36 3 10.5 3S18 6.36 18 10.5z"/><circle cx="12" cy="10.5" r="3.5"/></svg>
+          <span class="text-lg text-[#d90429] font-semibold">Calígula 3243, Col. Camino Real</span>
+        </div>
+      </div>
+      <!-- Redes Sociales -->
+      <div class="w-full md:w-1/2 flex flex-col items-end">
+        <h3 class="text-xl font-bold mb-4 text-left">Síguenos</h3>
+        <div class="flex gap-6">
+          <a href="https://www.facebook.com/p/Grateksa-100093127039192/" target="_blank" class="transition hover:text-[#1877f3]" aria-label="Facebook">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H6v4h4v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/grateksa/" target="_blank" class="transition hover:text-[#e1306c]" aria-label="Instagram">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@grateksaa" target="_blank" class="transition hover:text-[#25F4EE]" aria-label="TikTok">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17a4 4 0 1 1 4-4V3h3a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-[#BDBDBD] text-sm mt-8">&copy; 2024 Grateksa. Todos los derechos reservados. | <a href="https://franciscogonzalez.netlify.app/" class="text-[#d90429] hover:text-[#d90429] transition underline" target="_blank">Francisco Gonzalez Sosa</a> </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+
+  <script>
+    // Menú móvil hamburguesa
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('translate-x-full');
+      navBackdrop.classList.toggle('hidden');
+    });
+    navBackdrop.addEventListener('click', () => {
+      navMenu.classList.add('translate-x-full');
+      navBackdrop.classList.add('hidden');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.add('translate-x-full');
+        navBackdrop.classList.add('hidden');
+      });
+    });
+  </script>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+528180647864 " target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-5 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+</body>
+</html> 
