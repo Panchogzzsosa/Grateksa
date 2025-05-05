@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/brigadas', (req, res) => {
+  res.render('brigadas');
+});
+
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 }); 

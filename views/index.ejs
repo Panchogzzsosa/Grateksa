@@ -43,7 +43,8 @@
     </button>
     <!-- Menú -->
     <div id="nav-menu" class="fixed md:static top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg md:shadow-none flex flex-col md:flex-row gap-8 text-base font-semibold items-start md:items-center justify-start md:justify-end px-8 py-20 md:py-0 md:px-0 transition-transform duration-300 transform translate-x-full md:translate-x-0 z-40">
-      <a href="#servicios" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Servicios</a>
+        <a href="/" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Inicio</a>
+        <a href="#servicios" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Servicios</a>
       <a href="#quienes-somos" class="hover:text-red-600 transition w-full md:w-auto mb-6 md:mb-0">Quiénes Somos</a>
     </div>
     <!-- Fondo oscuro al abrir menú -->
@@ -92,13 +93,15 @@
     <br>
     <h2 class="text-3xl font-bold text-center mb-12 animate-fadeIn">Nuestros Servicios</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <% services.forEach(service => { %>
-        <div class="bg-white rounded-2xl p-0 flex flex-col items-start border border-[#ececec] hover:shadow-lg transition animate-scaleIn" data-aos="fade-up">
-          <img src="<%= service.img %>" alt="<%= service.title %>" class="w-full h-80 object-cover rounded-2xl rounded-b-none">
-          <div class="p-8 flex flex-col gap-2 w-full">
-            <h3 class="text-2xl font-bold mb-2"><%= service.title %></h3>
-            <p class="text-[#555] mb-6"><%= service.desc %></p>
-            <a href="#" class="text-base font-semibold text-[#22223B] flex items-center gap-2 hover:text-red-600 transition">VER MÁS <span>&#8594;</span></a>
+      <% services.forEach((service, i) => { %>
+        <div class="bg-white rounded-2xl p-0 flex flex-col border border-[#ececec] hover:shadow-lg transition animate-scaleIn h-full" data-aos="fade-up">
+          <img src="<%= service.img %>" alt="<%= service.title %>" class="w-full h-48 md:h-64 object-cover rounded-2xl rounded-b-none">
+          <div class="flex flex-col flex-1 justify-between p-8 gap-2 w-full h-full">
+            <div>
+              <h3 class="text-2xl font-bold mb-2"><%= service.title %></h3>
+              <p class="text-[#555] mb-6"><%= service.desc %></p>
+            </div>
+            <a href="<%= service.title === 'Capacitación de Brigadas' ? '/brigadas' : '#' %>" class="text-base font-semibold text-[#22223B] flex items-center gap-2 hover:text-red-600 transition mt-auto">VER MÁS <span>&#8594;</span></a>
           </div>
         </div>
       <% }); %>
