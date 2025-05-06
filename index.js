@@ -2,6 +2,17 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware para mantener la aplicación activa
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  next();
+});
+
+// Endpoint de health check
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
@@ -44,4 +55,13 @@ app.get('/programas-internos', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
+  
+  // Función para mantener la aplicación activa
+  const keepAlive = () => {
+    fetch(`http://localhost:${port}/health`)
+      .catch(err => console.log('Error en keep-alive:', err));
+  };
+  
+  // Ejecutar keep-alive cada 5 minutos
+  setInterval(keepAlive, 5 * 60 * 1000);
 }); 
